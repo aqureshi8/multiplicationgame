@@ -125,6 +125,12 @@ struct GameView: View {
                     nextQuestion()
                 }
             }
+        }.toolbar {
+            if (answerIsFocused) {
+                Button("Done") {
+                    nextQuestion()
+                }
+            }
         }
     }
     
@@ -154,5 +160,5 @@ struct GameView: View {
 }
 
 #Preview {
-    GameView(multiplicationTable: 5, questionTotal: 5)
+    ContentView()
 }
